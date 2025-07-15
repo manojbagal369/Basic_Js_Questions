@@ -1,0 +1,19 @@
+/*
+15. Remove Falsy Values
+Problem: Return a new array without falsy values (false, 0, "", null, undefined, NaN).
+Test Cases:
+removeFalsy([0, 1, false, 2, '', 3]) ➞ [1, 2, 3]
+removeFalsy([null, undefined, 'hello']) ➞ ['hello']
+*/
+function removeFalsy(arr) {
+  let nonFalsy = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      nonFalsy.push(arr[i]);
+    }
+  }
+  return nonFalsy;
+}
+
+console.log(removeFalsy([0, 1, false, 2, "", 3]));
+console.log(removeFalsy([null, undefined, "hello"]));
